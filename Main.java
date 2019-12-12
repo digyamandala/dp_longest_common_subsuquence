@@ -1,14 +1,13 @@
 class Main {
 
   /*
-    Find LONGEST COMMON SUBSEQUENCE using Dynamic Programming
-    Formula:
-
-    f(i,0) = f(0,j) = 0
-
-    f(i,j) = max(f(i-1,j), f(i,j-1)) if A[i] == B[j]
-    f(i,j) = f(i-1,j) + 1 if A[i] != B[j]
-  */
+   * Find LONGEST COMMON SUBSEQUENCE using Dynamic Programming Formula:
+   * 
+   * f(i,0) = f(0,j) = 0
+   * 
+   * f(i,j) = max(f(i-1,j), f(i,j-1)) if A[i] == B[j]
+   * f(i,j) = f(i-1,j) + 1 if A[i] != B[j]
+   */
 
   private static int[][] generate_LCS_table(String a, String b) {
     int[][] dp = new int[101][101];
@@ -35,7 +34,7 @@ class Main {
     String b = "aguidkejf";
     int a_length = a.length();
     int b_length = b.length();
-    //Longest common subsequence is 'adef', should return 4
+    // Longest common subsequence is 'adef', should return 4
 
     int[][] dp = generate_LCS_table(a, b);
     System.out.println(dp[a_length][b_length]);
