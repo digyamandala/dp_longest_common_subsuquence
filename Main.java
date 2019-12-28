@@ -32,19 +32,6 @@ class Main {
     return dp;
   }
 
-  /*
-   * Find LONGEST COMMON SUBSEQUENCE STRING using Dynamic Programming Formula:
-   * 
-   * f(i,0) = f(0,j) = ''
-   * 
-   * if A[i-1] == B[j-1]
-   * f(i,j) = max(f(i-1,j), f(i,j-1))
-   * 
-   * if A[i-1] != B[j-1]
-   * f(i,j) = f(i-1,j) + A[i-1]
-   * 
-   * because in Array of A and B, indexing starts from 0
-   */
   private static String[][] generate_LCS_str_table(String a, String b) {
     String[][] dpString = new String[101][101];
 
